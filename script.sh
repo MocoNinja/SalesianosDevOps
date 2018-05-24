@@ -15,8 +15,11 @@ echo "Construyendo la imagen del mysql personalizado..."
 
 cd ./DATA
 
-sh build.sh
+sh buildSQL.sh
 
+echo "Construyendo la imagen de la app..."
+
+sh buildAPP.sh
 
 echo "Iniciando contenedor de la base de datos..."
 
@@ -25,6 +28,10 @@ sh runMYSQL.sh
 echo "Iniciando contenedor del PHPMYADMIN..."
 
 sh runADMN.sh
+
+echo "Iniciando contenedor de la app..."
+
+sh runAPP.sh
 
 cd ..
 
