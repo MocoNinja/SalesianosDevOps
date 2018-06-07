@@ -1,5 +1,14 @@
 #! /bin/bash
 
+echo "Comprobando la existencia del código..."
+if [ ! -d ./DATA/BancodeTrabajo]; then
+	echo "No se ha encontrado la carpeta del código fuente."
+	echo "Recuerda copiar la carpeta de BancodeTrabajo en ./DATA/!"
+	exit 1
+else
+	echo "Código OK!"
+fi
+
 echo "Comprobando la existencia de la red..."
 resultado=$(sudo docker network ls | grep "salesianos") 
 # echo $resultado
