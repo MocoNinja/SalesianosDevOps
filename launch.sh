@@ -1,7 +1,7 @@
 #! /bin/bash
 
 echo "Comprobando la existencia del código..."
-if [ ! -d ./DATA/BancodeTrabajo]; then
+if [ ! -d ./DATA/BancodeTrabajo ]; then
 	echo "No se ha encontrado la carpeta del código fuente."
 	echo "Recuerda copiar la carpeta de BancodeTrabajo en ./DATA/!"
 	exit 1
